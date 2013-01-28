@@ -1,11 +1,11 @@
 Summary:	D-Bus service for applications to request thumbnails
 Name:		tumbler
-Version:	0.1.26
+Version:	0.1.27
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/apps/tumbler/0.1/%{name}-%{version}.tar.bz2
-# Source0-md5:	874621e7820b3bfe0e8ab66d17f1dc31
+# Source0-md5:	3fa90528c3e7e77d8ace4bffcf0a2748
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dbus-glib-devel
@@ -100,6 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/services/org.xfce.Tumbler.Cache1.service
 %{_datadir}/dbus-1/services/org.xfce.Tumbler.Manager1.service
 %{_datadir}/dbus-1/services/org.xfce.Tumbler.Thumbnailer1.service
+%dir %{_sysconfdir}/xdg/tumbler
+%{_sysconfdir}/xdg/tumbler/tumbler.rc
 
 %files libs
 %defattr(644,root,root,755)
