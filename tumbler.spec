@@ -1,7 +1,7 @@
 Summary:	D-Bus service for applications to request thumbnails
 Name:		tumbler
 Version:	0.1.30
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/apps/tumbler/0.1/%{name}-%{version}.tar.bz2
@@ -78,7 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/tumbler-1/plugins/{cache/,}*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/{,tumbler-1/plugins/{cache/,}}*.la
 
 %find_lang %{name}
 
